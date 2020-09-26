@@ -4,11 +4,11 @@ Gravity Gearworks, a 2D-platforming game, ITERATION 1
 
 Game Link: TBD
 
-##Report
+## Report
 
 
 
-##Checklist & Self Evalutaion
+## Checklist & Self Evalutaion
 
 - [ ] D-1: The repository link is submitted to Canvas before the project deadline.
 - [ ] D-2: The repository contains a <code>README.md</code> file in its top-level directory.
@@ -33,5 +33,8 @@ Game Link: TBD
 - [ ] ⭐ Include tiles that can be passed in one direction, such as being able to jump up through a tile and land atop it.
 
 
-##Third-Party Assets
+## Third-Party Assets
 
+Level tiles/Sprites are from from "Abstract Platformer". Created in 2016 by kenney.nl,
+[CC0 1.0 Universal](http://creativecommons.org/publicdomain/zero/1.0/). Source:
+https://www.kenney.nl/assets/abstract-platformer
