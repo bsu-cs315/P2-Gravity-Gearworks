@@ -114,7 +114,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 scroll_base_offset = Vector2( 0, 300 )
 
 [node name="MainBG" type="Sprite" parent="ParallaxBackground"]
-modulate = Color( 1, 1, 1, 0.670588 )
+modulate = Color( 1, 1, 1, 0.384314 )
 position = Vector2( 937.497, 241.337 )
 scale = Vector2( 3.92968, 2.00557 )
 texture = ExtResource( 5 )
