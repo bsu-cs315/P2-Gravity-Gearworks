@@ -5,7 +5,9 @@ Gravity Gearworks, a 2D-platforming game, ITERATION 1
 Game Link: https://bsu-cs315.github.io/P2-Gravity-Gearworks/
 
 CONTROLS:
+
   Move - arrow keys or A/D
+  
   Jump - Spacebar
 
 ## Report
