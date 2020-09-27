@@ -1,12 +1,15 @@
 extends KinematicBody2D
 
 
-onready var gravity = ProjectSettings.get("physics/2d/default_gravity") * 0.2
-onready var animated_sprite = $AnimatedSprite
 
+const JUMP_STRENGTH = -525.0
+const WALK_SPEED = 300.0
 
 var velocity = Vector2()
 var jumping = true
+
+onready var gravity = ProjectSettings.get("physics/2d/default_gravity") * 0.2
+onready var animated_sprite = $AnimatedSprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,7 +19,7 @@ func _ready():
 func _physics_process(delta):
 	# Side-to-side movement
 	var direction = get_direction()
-	var linear_velocity = direction * 300
+	var linear_velocity = direction * WALK_SPEED
 	var _ignored = move_and_slide(linear_velocity)
 	
 	
@@ -27,7 +30,7 @@ func _physics_process(delta):
 	
 	# Jumping
 	if Input.is_action_just_pressed("jump") and !jumping:
-		velocity.y = -525
+		velocity.y = JUMP_STRENGTH
 		jumping = true
 	
 	if is_on_floor():
