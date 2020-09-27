@@ -110,15 +110,20 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 [node name="Level" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_offset = Vector2( 0, 300 )
 
 [node name="MainBG" type="Sprite" parent="ParallaxBackground"]
 modulate = Color( 1, 1, 1, 0.670588 )
-position = Vector2( 937.497, 0 )
-scale = Vector2( 3.92968, 1 )
+position = Vector2( 937.497, 241.337 )
+scale = Vector2( 3.92968, 2.00557 )
 texture = ExtResource( 5 )
 
 [node name="Diamonds" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0.1, 1 )
+motion_scale = Vector2( 0.1, 0 )
+
+[node name="Sprite0" type="Sprite" parent="ParallaxBackground/Diamonds"]
+texture = ExtResource( 6 )
+offset = Vector2( -640, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Diamonds"]
 texture = ExtResource( 6 )
@@ -136,7 +141,7 @@ texture = ExtResource( 6 )
 offset = Vector2( 1920, 0 )
 
 [node name="Hills" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0.25, 1 )
+motion_scale = Vector2( 0.25, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/Hills"]
 texture = ExtResource( 7 )
