@@ -1,7 +1,6 @@
 extends KinematicBody2D
 
 
-
 const JUMP_STRENGTH = -525.0
 const WALK_SPEED = 300.0
 
@@ -22,11 +21,9 @@ func _physics_process(delta):
 	var linear_velocity = direction * WALK_SPEED
 	var _ignored = move_and_slide(linear_velocity)
 	
-	
 	# Gravity using Vector2 velocity
 	velocity.y += gravity + delta
 	velocity = move_and_slide(velocity, Vector2(0,-1))
-	
 	
 	# Jumping
 	if Input.is_action_just_pressed("jump") and !jumping:
@@ -36,16 +33,12 @@ func _physics_process(delta):
 	if is_on_floor():
 		jumping = false
 	
-	
 	# Sprite flipping based on direction
 	if direction.x != 0:
 		animated_sprite.scale.x = 1 if direction.x > 0 else -1
 		animated_sprite.play("walk")
 	if direction.x == 0:
 		animated_sprite.play("idle")
-	
-
-
 
 
 func get_direction():
