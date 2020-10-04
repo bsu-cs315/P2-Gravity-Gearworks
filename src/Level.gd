@@ -8,17 +8,17 @@ var score = 0
 func _ready():
 	pass # Replace with function body.
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("jump") and exit_door_entered == 1:
 		var _ignored = get_tree().change_scene("res://src/EndScreen.tscn")
 
 
-func _on_ExitDoor_body_entered(body):
+func _on_ExitDoor_body_entered(_body):
 	$ExitDoor/ExitLabel.show()
 	exit_door_entered = 1
 
 
-func _on_ExitDoor_body_exited(body):
+func _on_ExitDoor_body_exited(_body):
 	$ExitDoor/ExitLabel.hide()
 	exit_door_entered = 0
 
