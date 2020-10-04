@@ -11,5 +11,5 @@ func _ready():
 
 func _on_Gem_body_entered(body):
 	emit_signal("gem_collected")
-	queue_free()
+	$AnimationPlayer.play("collected")
 	$CollisionPolygon2D.set_deferred("disabled",true)
