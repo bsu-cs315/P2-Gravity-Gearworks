@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/items/doorOpen_top.png" type="Texture" id=1]
+[ext_resource path="res://src/ExitDoor.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2.98983, 25.6052 )
+
+[node name="ExitDoor" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 5.00565 )
+shape = SubResource( 1 )
+
+[node name="ExitLabel" type="Label" parent="."]
+margin_left = -37.1627
+margin_top = -51.4332
+margin_right = 38.8373
+margin_bottom = -37.4332
+text = "Jump to Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
