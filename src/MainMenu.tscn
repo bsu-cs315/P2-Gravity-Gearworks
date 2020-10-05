@@ -19,10 +19,11 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 440.0
-margin_top = 496.0
-margin_right = 584.0
-margin_bottom = 516.0
+margin_left = 360.0
+margin_top = 488.0
+margin_right = 504.0
+margin_bottom = 508.0
+rect_scale = Vector2( 2, 2 )
 text = "Press Space to begin"
 __meta__ = {
 "_edit_use_anchors_": false
