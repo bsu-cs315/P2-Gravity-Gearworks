@@ -28,3 +28,4 @@ func _on_Gem_gem_collected():
 	$CoinSound.play()
 	score += 1
 	$HUD/ScoreLabel.text = "= "+str(score)
+	$Player/AnimatedSprite.speed_scale += 0.06
