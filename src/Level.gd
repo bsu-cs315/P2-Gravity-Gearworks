@@ -6,10 +6,11 @@ var score = 0
 
 
 func _ready():
-	pass # Replace with function body.
+	$LevelMusic.play()
 
 func _process(_delta):
 	if Input.is_action_just_pressed("jump") and exit_door_entered == 1:
+		$LevelMusic.stop()
 		var _ignored = get_tree().change_scene("res://src/EndScreen.tscn")
 
 
@@ -24,6 +25,6 @@ func _on_ExitDoor_body_exited(_body):
 
 
 func _on_Gem_gem_collected():
-	# TODO: Play sound effect.
+	$CoinSound.play()
 	score += 1
 	$HUD/ScoreLabel.text = "= "+str(score)
