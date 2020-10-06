@@ -1,8 +1,8 @@
 extends Node2D
 
 
-var exit_door_entered = 0
-var score = 0
+var exit_door_entered := 0
+var score := 0
 
 
 func _ready():

@@ -3,8 +3,8 @@ extends Area2D
 
 signal gem_collected
 
-var rng = RandomNumberGenerator.new()
-var delay_time = rng.randf_range(0.01,0.99)
+var rng := RandomNumberGenerator.new()
+var delay_time := rng.randf_range(0.01,0.99)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
