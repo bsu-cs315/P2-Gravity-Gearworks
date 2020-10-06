@@ -25,7 +25,6 @@ func _physics_process(delta):
 	_velocity.y += gravity + delta
 	_velocity = move_and_slide(_velocity, Vector2(0,-1))
 	
-	# Jumping
 	if Input.is_action_just_pressed("jump") and !_jumping:
 		_velocity.y = STRENGTH_JUMP
 		_jumping = true
@@ -33,7 +32,6 @@ func _physics_process(delta):
 	if is_on_floor():
 		_jumping = false
 	
-	# Sprite flipping based on direction
 	if direction.x != 0:
 		_animated_sprite.scale.x = 1 if direction.x > 0 else -1
 		_animated_sprite.play("walk")
